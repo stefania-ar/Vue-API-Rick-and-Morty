@@ -18,14 +18,15 @@ export default createStore({
       try {
         const url= 'https://rickandmortyapi.com/api/character';
         const response= await fetch(url);
+        console.log("hola");
         if(response.ok){
           let t = await response.json();
-          console.log(t);
+          console.log(t.results);
         }
       } catch (error) {
-        
+          console.log(error);
+        } 
       }
-    } 
   },
   modules: {
   }
